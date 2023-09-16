@@ -4,10 +4,10 @@ DEST_DIR := ~/.config
 all:
 
 install: $(DEST_DIR)
-	cp pycodestyle $(DEST_DIR)/
+	cp -a pycodestyle $(DEST_DIR)/
 
 uninstall:
-	rm $(DEST_DIR)/pycodestyle
+	rm -f $(DEST_DIR)/pycodestyle
 
 $(DEST_DIR):
-	mkdir $(DEST_DIR)
+	mkdir -p $(DEST_DIR)
