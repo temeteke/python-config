@@ -1,12 +1,16 @@
 DEST_DIR := ~/.config
 
-.PHONY: all install uninstall
+.PHONY: all install install-config uninstall uninstall-config
 all:
 
-install: $(DEST_DIR)
+install: install-config
+
+install-config: $(DEST_DIR)
 	cp -a pycodestyle $(DEST_DIR)/
 
-uninstall:
+uninstall: uninstall-config
+
+uninstall-config:
 	rm -f $(DEST_DIR)/pycodestyle
 
 $(DEST_DIR):
